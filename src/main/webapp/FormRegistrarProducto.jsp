@@ -5,40 +5,56 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Registrar Producto</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    body {
+        background-color: #c5dec9;
+        padding-top: 20px; /* Espacio superior */
+    }
+</style>
 </head>
-<body bgcolor="#c5dec9">
-<h1 align="center">Registrar Producto</h1>
-<div align="center">
-    <a href="ControladorProducto?accion=Listar" style="text-decoration: none; color: blue;">Ver Listado de Productos</a>
+<body>
+<div class="container">
+    <h1 class="text-center">Registrar Producto</h1>
+
+    <div class="text-center mb-3">
+        <a href="ControladorProducto?accion=Listar" class="btn btn-primary">Ver Listado de Productos</a>
+    </div>
+
+    <form action="ControladorProducto" method="post">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="precioventa">Precio Venta</label>
+                    <input type="text" class="form-control" id="precioventa" name="precioventa" required>
+                </div>
+                <div class="form-group">
+                    <label for="preciocompra">Precio Compra</label>
+                    <input type="text" class="form-control" id="preciocompra" name="preciocompra" required>
+                </div>
+                <div class="form-group">
+                    <label for="estado">Estado</label>
+                    <input type="text" class="form-control" id="estado" name="estado" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion" required>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success">Registrar Producto</button>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
-<form action="ControladorProducto" method="post">
-<table border="2" align="center">
-<tr>
-<td>Nombre</td>
-<td><input type="text" name="nombre"></td>
-</tr>
-<tr>
-<td>Precio Venta</td>
-<td><input type="text" name="precioventa"></td>
-</tr>
-<tr>
-<td>Precio Compra</td>
-<td><input type="text" name="preciocompra"></td>
-</tr>
-<tr>
-<td>Estado</td>
-<td><input type="text" name="estado"></td>
-</tr>
-<tr>
-<td>Descripcion</td>
-<td><input type="text" name="descripcion"></td>
-</tr>
-<tr>
-<td colspan="2"  align="center" >
-<input type="submit" value="Registrar Producto">
-</td>
-</tr>
-</table>
-</form>
+
+<!-- Bootstrap JS y dependencias (jQuery) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
